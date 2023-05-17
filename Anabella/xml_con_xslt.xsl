@@ -13,16 +13,16 @@
                     <h1><xsl:value-of select="ite/@nombre"/></h1>  
                 </header>
                                 
-                <a>Empresa: <xsl:value-of select="ite/empresa"/></a><br/><br/>
-                <a>Teléfono: <xsl:value-of select="ite/telefono"/></a><br/><br/>
-                <a href="https://www.grupoproeduca.com/">Página web: Edix</a><br/><br/>
-                <a>Profesores:</a><br/><br/>
+                <a><b>Empresa:</b><xsl:value-of select="ite/empresa"/></a><br/><br/>
+                <a><b>Teléfono: </b><xsl:value-of select="ite/telefono"/></a><br/><br/>
+                <a href="https://www.grupoproeduca.com/"><b>Página web:</b> Edix</a><br/><br/>
+                <a><b>Profesores:</b></a><br/><br/>
                 
                 <table class="t1">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
+                            <th><b>ID</b></th>
+                            <th><b>Nombre</b></th>
                         </tr>
                     </thead> 
 
@@ -49,17 +49,17 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>Nombre</th>
-                                <th>ID</th>
-                                <th>Grado</th>
-                                <th>Decreto</th>
+                                <th><b>Nombre</b></th>
+                                <th><b>ID</b></th>
+                                <th><b>Grado</b></th>
+                                <th><b>Decreto</b></th>
                             </tr>                       
                         </thead>
                     
                         <tbody><xsl:for-each select="ite/ciclos/ciclo">
                             <tr>
                                 <td><xsl:value-of select="nombre"/></td> 
-                                <td><xsl:value-of select="@ide"/></td>                               
+                                <td><a href="https://www.edix.com/es/cursos-fp/"><xsl:value-of select="@id"/></a></td>                               
                                 <td><xsl:value-of select="grado"/></td>
                                 <td><xsl:value-of select="decretoTitulo/@año"/></td>
                             </tr> 
@@ -74,21 +74,21 @@
    
                             <legend>Datos personales:</legend>
                                 
-                                <label for="nombre"> Nombre: </label><br/>
+                                <b><label for="nombre"> Nombre: </label></b><br/>
                                 <input id="nombre" size="70px" type="text" name="nombre" autofocus="nombre"/><br/>
                                
-                                <label for="apellidos">Apellidos</label><br/>
+                                <b><label for="apellidos">Apellidos</label></b><br/>
                                 <input id="apellidos" size="70px" type="text" name="apellidos"/><br/>
                                                                
-                                <label for="teléfono">Teléfono</label><br/>
+                                <b><label for="teléfono">Teléfono</label></b><br/>
                                 <input id="teléfono" size="70px" type="text" name="teléfono"/><br/>
 
-                                <label for="email">Email</label><br/>
+                                <b><label for="email">Email</label></b><br/>
                                 <input id="email" size="70px" type="text" name="email"/><br/>                     
                            
                         </fieldset><br/>
                         <fieldset>
-                            <label for="grado">Selecciona el grado de tu interés</label><br/>
+                            <b><label for="grado">Selecciona el grado de tu interés</label></b><br/>
                                 <ul type="square">
                                     <li><input type="checkbox" name="grado" value="A"/>ASIR<br/></li>
                                     <li><input type="checkbox" name="grado" value="W"/>DAW<br/></li>
@@ -96,7 +96,7 @@
                                 </ul>  
                         </fieldset><br/>
                         <fieldset>
-                            <label>Dejanos tu comentario</label><br/>
+                            <b><label>Dejanos tu comentario</label></b><br/>
                             <input size="70px" style="resize: none"></input><br/>
                             <input type="submit" value="Enviar"/>                        
                         </fieldset>                        
