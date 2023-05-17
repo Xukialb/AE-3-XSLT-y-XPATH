@@ -1,3 +1,8 @@
+body{
+    width: auto;
+    margin: 10px;    
+    }
+
 h1{
     color: rgb(101, 101, 182);
     font-family: initial;
@@ -10,23 +15,17 @@ a{
     font-style: italic;
 }
 
-t1{
-    border-color: solid rgb(187, 127, 199) ;
-    padding: 5px;
-    margin: 5px;
-    text-align: center;
-}
-
 h3{
     color: rgb(101, 101, 182);
     font-family: initial;
     font-style: italic;
 }
 
-t2{
-    border-color: solid rgb(36, 146, 86) ;
-    padding: 5px;
-    margin: 5px;
-    text-align: center;
+table{
+    border-color: palevioletred;
 }
 
+fieldset{
+    border-color: blue;
+
+}
