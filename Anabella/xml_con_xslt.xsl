@@ -13,12 +13,12 @@
                     <h1><xsl:value-of select="ite/@nombre"/></h1>  
                 </header>
                                 
-                <a>Empresa: <xsl:value-of select="ite/empresa"/></a><br/>
-                <a>Teléfono: <xsl:value-of select="ite/telefono"/></a><br/>
-                <a href="https://www.grupoproeduca.com/">Página web: Edix</a><br/>
-                <a>Profesores:</a><br/>
+                <a>Empresa: <xsl:value-of select="ite/empresa"/></a><br/><br/>
+                <a>Teléfono: <xsl:value-of select="ite/telefono"/></a><br/><br/>
+                <a href="https://www.grupoproeduca.com/">Página web: Edix</a><br/><br/>
+                <a>Profesores:</a><br/><br/>
                 
-                <table>
+                <table class="t1">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -26,11 +26,13 @@
                         </tr>
                     </thead> 
 
-                    <tbody><xsl:for-each select="ite/profesores/profesor"/>               
-                        <tr> 
-                            <td><xsl:value-of select="id"/></td>
-                            <td><xsl:value-of select="nombre"/></td>                       
-                        </tr> 
+                    <tbody>
+                        <xsl:for-each select="ite/profesores/profesor">               
+                            <tr> 
+                                <td><xsl:value-of select="id"/></td>
+                                <td><xsl:value-of select="nombre"/></td>                       
+                            </tr> 
+                        </xsl:for-each>
                     </tbody>                   
                 </table>
 
@@ -54,13 +56,14 @@
                             </tr>                       
                         </thead>
                     
-                        <tbody><xsl:for-each select="ite/ciclos/ciclo"/>
+                        <tbody><xsl:for-each select="ite/ciclos/ciclo">
                             <tr>
-                                <td><xsl:value-of select="nombre"/></td>
-                                <td><a href="https://www.edix.com/es/fp/"><xsl:value-of select="@ide"/></a></td>
+                                <td><xsl:value-of select="nombre"/></td> 
+                                <td><xsl:value-of select="@ide"/></td>                               
                                 <td><xsl:value-of select="grado"/></td>
                                 <td><xsl:value-of select="decretoTitulo/@año"/></td>
                             </tr> 
+                            </xsl:for-each>
                         </tbody>                   
                     </table>
 
@@ -70,15 +73,19 @@
                         <fieldset >
    
                             <legend>Datos personales:</legend>
+                                
                                 <label for="nombre"> Nombre: </label><br/>
-                                <input id="nombre" type="text" name="nombre" autofocus="nombre"/><br/>
+                                <input id="nombre" size="70px" type="text" name="nombre" autofocus="nombre"/><br/>
+                               
                                 <label for="apellidos">Apellidos</label><br/>
-                                <input id="apellidos" type="text" name="apellidos"/><br/>
+                                <input id="apellidos" size="70px" type="text" name="apellidos"/><br/>
+                                                               
                                 <label for="teléfono">Teléfono</label><br/>
-                                <input id="teléfono" type="text" name="teléfono"/><br/>
+                                <input id="teléfono" size="70px" type="text" name="teléfono"/><br/>
+
                                 <label for="email">Email</label><br/>
-                                <input id="email" type="text" name="email"/><br/>                     
-                     
+                                <input id="email" size="70px" type="text" name="email"/><br/>                     
+                           
                         </fieldset><br/>
                         <fieldset>
                             <label for="grado">Selecciona el grado de tu interés</label><br/>
@@ -89,8 +96,8 @@
                                 </ul>  
                         </fieldset><br/>
                         <fieldset>
-                            <label>Dejanos tu comentario</label>
-                            <input size="100px"></input>
+                            <label>Dejanos tu comentario</label><br/>
+                            <input size="70px" style="resize: none"></input><br/>
                             <input type="submit" value="Enviar"/>                        
                         </fieldset>                        
                    
