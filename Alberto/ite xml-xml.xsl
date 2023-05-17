@@ -59,6 +59,31 @@
                 </xsl:attribute> 
 
             </jefe_de_estudios>
+
+            <ciclos>
+            
+            <xsl:for-each select="ite/ciclos/ciclo">
+
+            <ciclo>
+            
+                <xsl:attribute name="nombre">
+                    <xsl:value-of select="nombre"/>
+                </xsl:attribute> 
+
+                <xsl:attribute name="grado">
+                    <xsl:value-of select="grado"/>
+                </xsl:attribute>    
+
+                <xsl:attribute name="decreto_titulo">
+                    <xsl:value-of select="decretoTitulo/@año"/>
+                </xsl:attribute> 
+
+                <denominacion><xsl:value-of select="@id"/></denominacion>                                       
+
+            </ciclo>
+            </xsl:for-each>            
+            
+            </ciclos>
             
 
             </personal>  
