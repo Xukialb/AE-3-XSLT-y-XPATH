@@ -13,12 +13,12 @@
                     <h1><xsl:value-of select="ite/@nombre"/></h1>  
                 </header>
                                 
-                <a><b>Empresa:</b><xsl:value-of select="ite/empresa"/></a><br/><br/>
+                <a href="https://www.grupoproeduca.com/"><b>Empresa:</b><xsl:value-of select="ite/empresa"/></a><br/><br/>
                 <a><b>Teléfono: </b><xsl:value-of select="ite/telefono"/></a><br/><br/>
-                <a href="https://www.grupoproeduca.com/"><b>Página web:</b> Edix</a><br/><br/>
+                <a href="https://www.edix.com/es/"><b>Página web:</b> Edix</a><br/><br/>
                 <a><b>Profesores:</b></a><br/><br/>
                 
-                <table class="t1">
+                <table>
                     <thead>
                         <tr>
                             <th><b>ID</b></th>
@@ -37,11 +37,11 @@
                 </table>
 
                 <p>Director:<xsl:value-of select="ite/director/nombre"/></p>
-                    <ul type="disc">
+                    <ul type="square">
                         <li>Despacho: <xsl:value-of select="ite/director/despacho"/></li>
                     </ul>
                 <p>Jefe de estudios: <xsl:value-of select="ite/jefe_estudios/nombre"/></p>
-                    <ul type="disc">
+                    <ul type="square">
                         <li>Despacho: <xsl:value-of select="ite/jefe_estudios/despacho"/></li>
                     </ul>                        
                 
@@ -89,7 +89,7 @@
                         </fieldset><br/>
                         <fieldset>
                             <b><label for="grado">Selecciona el grado de tu interés</label></b><br/>
-                                <ul type="square">
+                                <ul>
                                     <li><input type="checkbox" name="grado" value="A"/>ASIR<br/></li>
                                     <li><input type="checkbox" name="grado" value="W"/>DAW<br/></li>
                                     <li><input type="checkbox" name="grado" value="M"/>DAM<br/></li>
