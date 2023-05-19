@@ -76,14 +76,26 @@
 		    </table> 
 
         <h3>Formulario de contacto:</h3>                        
-        <form action="procesarPeticion.jsp" method="get">
-            <label for="nombre">Nombre: </label>
-            <input id="nombre" type="text" name="nombre"/>
-            <br/>
-            <label for="edad">Edad: </label>
-            <input id="edad" type="text" name="edad" />
+        <form action="procesarPeticion.jsp" method="get"><br/>
+            <label for="nombre">Nombre: </label><br/>
+            <input id="nombre" type="text" name="nombre"/><br/>
+            <label for="apellidos">Apellidos</label><br/>
+            <input id="apellidos" size="70px" type="text" name="apellidos"/><br/>        
+            <label for="edad">Edad: </label><br/>
+            <input id="edad" type="text" name="edad" /><br/>
+            <label for="teléfono">Teléfono</label><br/>
+            <input id="teléfono" size="70px" type="text" name="teléfono"/><br/>
+            <label for="email">Email</label><br/>
+            <input id="email" size="70px" type="text" name="email"/><br/>
             <br/>
 
+            <label for="grado">Selecciona el grado de tu interés</label><br/>
+
+            <ul>
+                <li><input type="checkbox" name="grado" value="A"/>ASIR<br/></li>
+                <li><input type="checkbox" name="grado" value="W"/>DAW<br/></li>
+                <li><input type="checkbox" name="grado" value="M"/>DAM<br/></li>
+            </ul> 
             
             <br/>
             <label for="observaciones">Observaciones: </label>
@@ -100,10 +112,8 @@
 
             <br/>	
             <input type="submit" value="Enviar datos" />
-
-            <input type="reset" value="Limpiar formulario" />
-
-            <button>Boton normal</button>            
+            <br/>
+            <input type="reset" value="Limpiar formulario" />          
         
         </form>
 
