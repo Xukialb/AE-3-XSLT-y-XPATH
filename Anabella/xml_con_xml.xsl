@@ -7,7 +7,7 @@
             <xsl:attribute name="nombre">
                 <xsl:value-of select="ite/@nombre"/>  
             </xsl:attribute>              
-            <xsl:attribute name="teléfono">
+            <xsl:attribute name="telefono">
                 <xsl:value-of select="ite/telefono"/>
             </xsl:attribute>
             <xsl:attribute name="web">
@@ -16,10 +16,10 @@
             <claustro>
                 <director>
                     <xsl:attribute name="nombre">
-                    <xsl:value-of select="ite/directornombre"/>
+                    <xsl:value-of select="ite/director/nombre"/>
                 </xsl:attribute>
                 <xsl:attribute name="oficina">
-                    <xsl:value-of select="ite/directordespacho"/>
+                    <xsl:value-of select="ite/director/despacho"/>
                 </xsl:attribute>
                 </director>
                 <jefe_estudios>
@@ -31,31 +31,36 @@
                     </xsl:attribute>
                 </jefe_estudios>
                 <profesores>
-                    <xsl:for-each select="ite/profesores"/>
-                        <docente>
+                     <xsl:for-each select="ite/profesores/profesor"> 
+                        <docente>                                         
                             <xsl:attribute name="id">
-                                <xsl:value-of select="ite/profesores/profesor/id"/>
+                                <xsl:value-of select="id"/>
                             </xsl:attribute>
                             <xsl:attribute name="nombre">
-                                <xsl:value-of select="ite/profesores/profesor/nombre"/>
-                            </xsl:attribute>
-                        </docente>                    
+                                <xsl:value-of select="nombre"/>
+                            </xsl:attribute>                                               
+                        </docente>   
+                    </xsl:for-each>               
                 </profesores>            
             </claustro>
             <formacion>
-                 <xsl:for-each select="ite/ciclos/ciclo"/>
-                 <fp>                    
-                    <xsl:attribute name="id">
-                        <xsl:value-of select="ite/ciclos/ciclo/@id"/>
-                    </xsl:attribute>
-                    <xsl:attribute name="resolución">
-                        <xsl:value-of select="ite/ciclos/ciclo/decretoTitulo/@año"/>
+                 <xsl:for-each select="ite/ciclos/ciclo">
+                 <fp> 
+                    <xsl:attribute name="nombre">
+                        <xsl:value-of select="nombre"/>
                     </xsl:attribute>
                     <xsl:attribute name="grado">
-                        <xsl:value-of select="ite/ciclos/ciclo/grado"/>
+                        <xsl:value-of select="grado"/>
+                    </xsl:attribute>       
+                    <xsl:attribute name="id">
+                        <xsl:value-of select="@id"/>
                     </xsl:attribute>
-                    <nombre><xsl:value-of select="ite/ciclos/ciclo/nombre"/></nombre>
+                    <xsl:attribute name="resolucion">
+                        <xsl:value-of select="decretoTitulo/@año"/>
+                    </xsl:attribute>
+                    
                  </fp>
+                 </xsl:for-each>
             </formacion>           
         </Proeduca>
     </xsl:template>
