@@ -35,7 +35,6 @@
             </profesor>
             </xsl:for-each>
 
-
             <director>
 
                 <xsl:attribute name="nombre">
@@ -85,9 +84,7 @@
             </ciclo>
             </xsl:for-each>            
             
-            </ciclos>
-            
-
+            </ciclos>   
  
         </edix>
 
