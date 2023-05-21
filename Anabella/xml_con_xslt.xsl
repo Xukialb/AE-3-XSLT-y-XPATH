@@ -18,12 +18,11 @@
                 <a href="https://www.edix.com/es/"><b>Página web:</b> Edix</a><br/><br/>
                 <a><b>Profesores:</b></a><br/><br/>
                 
+                <div class="caja">
                 <table>
-                    <thead>
-                        <tr>
-                            <th><b>ID</b></th>
-                            <th><b>Nombre</b></th>
-                        </tr>
+                    <thead>                        
+                        <th><b>ID</b></th>
+                        <th><b>Nombre</b></th>                       
                     </thead> 
 
                     <tbody>
@@ -35,12 +34,12 @@
                         </xsl:for-each>
                     </tbody>                   
                 </table>
-
-                <p>Director:<xsl:value-of select="ite/director/nombre"/></p>
+                </div>
+                <p><b>Director:</b><xsl:value-of select="ite/director/nombre"/></p>
                     <ul type="square">
                         <li>Despacho: <xsl:value-of select="ite/director/despacho"/></li>
                     </ul>
-                <p>Jefe de estudios: <xsl:value-of select="ite/jefe_estudios/nombre"/></p>
+                <p><b>Jefe de estudios:</b> <xsl:value-of select="ite/jefe_estudios/nombre"/></p>
                     <ul type="square">
                         <li>Despacho: <xsl:value-of select="ite/jefe_estudios/despacho"/></li>
                     </ul>                        
@@ -65,10 +64,10 @@
                             </tr> 
                             </xsl:for-each>
                         </tbody>                   
-                    </table>
+                    </table><br/><br></br><hr/>
 
             
-                <h3>Formulario de contacto</h3>
+                <h3>Contacta con nosotros</h3>
                     <form action="procesarPeticion.jsp" method="post"></form>
                         <fieldset >
    
@@ -97,11 +96,12 @@
                         </fieldset><br/>
                         <fieldset>
                             <b><label>Dejanos tu comentario</label></b><br/>
-                            <input size="70px" style="resize: none"></input><br/>
+                            <input size="70px" style="resize: none" placeholder="Escribe un breve mensaje"></input><br/>
                             <input type="submit" value="Enviar"/>                        
                         </fieldset>                        
                    
-            </body>  
+            </body> 
+           
         </html>    
     
     </xsl:template>
