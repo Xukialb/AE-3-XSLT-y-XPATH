@@ -112,7 +112,7 @@
 
             <br/>	
             <input type="submit" value="Enviar datos" />
-            <br/>
+            <br/><br/>
             <input type="reset" value="Limpiar formulario" />          
         
         </form>

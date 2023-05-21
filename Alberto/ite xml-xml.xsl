@@ -60,6 +60,8 @@
 
             </jefe_de_estudios>
 
+            </personal> 
+
             <ciclos>
             
             <xsl:for-each select="ite/ciclos/ciclo">
@@ -86,7 +88,7 @@
             </ciclos>
             
 
-            </personal>  
+ 
         </edix>
 
     </xsl:template>
